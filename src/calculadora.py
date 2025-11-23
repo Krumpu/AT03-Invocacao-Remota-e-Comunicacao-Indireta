@@ -16,7 +16,7 @@ class CalculadoraLogica:
         
         try:
             permitidos =set("0123456780+-*/(). ")
-            if not set(expressao.issubset(permitidos)):
+            if not set(expressao).issubset(permitidos):
                 return "Erro: caracteres inválidos na expressão"
             
             return eval(expressao)
